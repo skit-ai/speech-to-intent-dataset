@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it using these metadata."
+authors:
+- family-names: "Nethil"
+  given-names: "Kumarmanas"
+- family-names: "Anandan"
+  given-names: "Kriti"
+- family-names: "Senani"
+  given-names: "Unnati"
+
+title: "Speech to Intent Dataset"
+abstract : "This dataset contains the Indian English speech samples tagged with relevant intents from the banking domain"
+type: dataset
+keywords:
+  - "intent-recognition"
+  - "speech-to-intent"
+  - "SLU"
+  - "Indian-English"
+version: 1.0.0
+date-released: 2022-24-04
+url: "https://github.com/skit-ai/speech-to-intent-dataset"
+license: CC BY-NC 4.0
