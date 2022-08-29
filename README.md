@@ -19,14 +19,16 @@ This dataset is shared under [Creative Commons Attribution-NonCommercial 4.0 Int
 
 This release contains data of (Indian English) speech samples tagged with the relevant intent from the banking domain.
 
-Frequency : 8 Khz
+Audio Quality : 8 Khz, 16-bit
 
 Structure
 
 ```
 - wav_audios          [contains the wav audio files]
-- dataset.csv         [contains the intent tag for audio files, where each row contains "<id> | <intent> | <template> | <audio-path> | <speaker-id>"]
-- speaker_info.csv    [contains the speaker characteristics, where each row contains "<speaker-id> | <native-language> | <languages-spoken> | <places-lived> | <gender>"]
+- train.csv           [contains the train split, where each row contains "<id> | <intent-class> | <template> | <audio-path> | <speaker-id>"]
+- test.csv            [contains the test split, where each row contains "<id> | <intent-class> | <template> | <audio-path> | <speaker-id>"]
+- intent_info.csv     [contains information about the intents, where each row contains "<intent-class> | <intent-name> | <description>"]
+- speaker_info.csv    [contains information about the speakers, where each row contains "<speaker-id> | <native-language> | <languages-spoken> | <places-lived> | <gender>"]
 
 ```
 
