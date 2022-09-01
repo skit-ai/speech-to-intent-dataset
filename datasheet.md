@@ -6,7 +6,7 @@ This is inspired from the [Datasheets for datasets](https://arxiv.org/pdf/1803.0
 
 Q1) For what purpose was the dataset created ? Was there a specific task in mind ? Was there a specific gap that needed to be filled ?
 
-Ans. This is a dataset for Intent classification from (Indian English) speech, and covers 14 intents drawn from the Banking domain. While there are other datasets that have approached this task, here we provide a large enough training dataset (`>650` samples per intent) to train models from scratch. We also provide anonymised speaker information to help answer questions around model robustness and bias.
+Ans. This is a dataset for Intent classification from (Indian English) speech, and covers 14 coarse-grained intents from the Banking domain. While there are other datasets that have approached this task, here we provide a much largee training dataset (`>650` samples per intent) to train models in an end-to-end fashion. We also provide anonymised speaker information to help answer questions around model robustness and bias.
 
 Q2) Who created the dataset and on behalf of which entity ?
 
@@ -47,9 +47,14 @@ Ans. In all there are `11845` samples, across the train and test splits:
 - `test.csv` has a total of `1400` samples, with exactly `100` samples per intent
 - `train.csv` has a total of `10445` samples, with atleast `650` samples per intent
 
-The 11 speakers are distributed across the samples, but unequally. However:
+The 11 speakers are distributed across the dataset, but unequally. However:
 - each intent has data from all speakers 
 - the speakers are stratified across the train and test split - for each intent independently
+
+Some statistics on the speakers are provided below. More granular information can be found in `speaker_info.csv`:
+- Native languages: `Hindi`(4), `Bengali`(3), `Kannada`(2), `Malayalam`(1), `Punjabi`(1)
+- Languages spoken: `Hindi`, `English`, `Bengali`, `Odia`, `Kannada`, `Punjabi`, `Malayalam`, `Bihari`, `Marathi`
+- Indian states lived in: `Bihar`, `Odisha`, `Karnataka`, `West Bengal`, `Punjab`, `Kerala`, `Jharkhand`, `Maharashtra`
 
 Q6) Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set ?
 
@@ -61,17 +66,17 @@ Ans. The recommended split into train and test sets is provided as `train.csv` a
 
 Q8) Are there any errors, sources of noise, or redundancies in the dataset?
 
-Ans. There could be background or channel noise present in the dataset, because the data was generated through telephone calls.
+Ans. There could be channel noise present in the dataset, because the data was generated through telephone calls. However, background noise will not be as prevalent as in real-world scenarios, since these telephone calls were made in a semi-controlled environment.
 
 Q9) Other comments.
 
-Ans. Speakers were responsible for generating variations in utterances, using the `template` field as a guide. So, there could be some unintentional overlap across utterances.
+Ans. Speakers were responsible for generating variations in utterances, using the `template` field as a guide. So, there could be some unintentional overlap across the content of utterances.
 
 ## Collection Process
 
 Q10) How was the data associated with each instance acquired ?
 
-Ans. Members of the (internal) Operation team generated each utterance using the associated `template` field as a guide, and injecting their own variations into speech.
+Ans. Members of the (internal) Operation team generated each utterance - using the associated `template` field as a guide, and injecting their own variations into the speech utterance.
 
 Q11) Who was involved in the data collection process and how were they compensated ?
 
