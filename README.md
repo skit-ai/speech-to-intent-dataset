@@ -1,4 +1,4 @@
-# Speech to Intent Dataset
+# Skit-S2I Dataset
 
 Dataset Release for Intent Classification task from Speech
 
@@ -38,6 +38,10 @@ Structure
 ```
 
 More information regarding the dataset can be found in the [datasheet](./datasheet.md).
+
+## Baselines
+
+The code for the baselines are provided in the [baselines](./baselines/) directory.
 
 ## Citation
 
