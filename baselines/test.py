@@ -10,7 +10,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+# choose the model
 from trainer_whisper import LightningModel
+# from trainer_hubert import LightningModel
+# from trainer_wav2vec2 import LightningModel
+
 from dataset import S2IMELDataset, collate_fn
 
 from tqdm import tqdm

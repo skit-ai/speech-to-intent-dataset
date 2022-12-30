@@ -5,12 +5,13 @@ This directory contains the code for the baselines in the paper [Skit-S2I: An In
 Download the dataset
 ```
 wget https://speech-to-intent-dataset.s3.ap-south-1.amazonaws.com/speech-to-intent.zip
+unzip speech-to-intent.zip
 ```
 <br>
 
 Install the necessary packages
 ```
-pip install -r requirements.txt
+conda env create -f environment.yml
 ```
 
 ## Training the baseline
